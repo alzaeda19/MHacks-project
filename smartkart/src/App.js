@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import GroceryList from './GroceryList';
 import LowStockAlerts from './LowStockAlerts';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   const [groceryItems, setGroceryItems] = useState([]);
@@ -16,8 +18,8 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h1>SmartKart</h1>
+    <div className="App container my-3">
+      <h1 className="text-center">SmartKart</h1>
       <GroceryList items={groceryItems} onAddItem={addItem} onRemoveItem={removeItem} />
       <LowStockAlerts items={groceryItems} />
     </div>
